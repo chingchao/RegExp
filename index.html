@@ -5,8 +5,30 @@
 	<title>正则工具</title>
 </head>
 <body>
-	<div>21</div>
+	<div class="wrap">
+		<h1>正则在线工具</h1>
+		<div class='container'>
+			<div class="content">
+				<textarea class='br3 b1 m0 p0 test-text mb10' name="" id="" rows="5" placeholder="请输入测试文本"></textarea>
+				<input class='reg-text p0 b1 br3 mb10' type="text" placeholder="请输入正则">
+				<div class='form-box mb10'>
+					<input class='btn' type="button" value='测试'>
+					<label for="global">
+						<input id='global' type="checkbox">
+						<span>全局</span>
+					</label>
+					<label for="ignore">
+						<input id='ignore' type="checkbox">
+						<span>忽略大小写</span>
+					</label>
+				</div>
+				<div class="result br3 b1"></div>
+			</div>
+			<div class="side br3 b1">
+				
+			</div>
+		</div>
+	</div>
 </body>
 <script src='dist/index.js'></script>
-
 </html>
