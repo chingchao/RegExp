@@ -1,22 +1,26 @@
 'use strict';
 
 let webpack = require('webpack');
-// let path = require('path');
+let path = require('path');
 // let ExtractTextPlugin = require("extract-text-webpack-plugin");  //独立打包less
 
 module.exports = {
 	devtool: 'eval-sorce-map',
 	entry: './index.js',
+	// entry: [
+ //        'webpack-dev-server/client?http://localhost:8001',
+ //        'webpack/hot/only-dev-server',
+ //        path.join(__dirname, 'index.js')
+ //    ],
 	output: {
 		path: __dirname + '/dist',
 		filename: 'index.js'
 	},
 
 	devServer: {
-		inline: true,
 		port: '8001',
-		hot: true,
-		historyApiFallback:true
+		inline: true,
+		historyApiFallback: true
 	},
 
 	module: {
@@ -33,10 +37,17 @@ module.exports = {
         },
         {
             test: /\.less/,
+            // use: ['css-loader', 'less-loader']
             loader: 'style-loader!css-loader!less-loader'
+   //          use: ExtractTextPlugin.extract({
+			// 	fallback: 'style-loader',
+			// 	//resolve-url-loader may be chained before sass-loader if necessary
+			// 	use: ['css-loader', 'less-loader']
+			// })
         }]
 	},
 	plugins:[
-          new webpack.HotModuleReplacementPlugin()
+		new webpack.HotModuleReplacementPlugin()
+		// new ExtractTextPlugin(),
      ]
 }
