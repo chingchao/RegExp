@@ -9,26 +9,31 @@
 		<h1>正则在线工具</h1>
 		<div class='container'>
 			<div class="content">
-				<textarea class='br3 b1 m0 p0 test-text mb10' name="" id="" rows="5" placeholder="请输入测试文本"></textarea>
-				<input class='reg-text p0 b1 br3 mb10' type="text" placeholder="请输入正则">
-				<div class='form-box mb10'>
-					<input class='btn' type="button" value='测试'>
-					<label for="global">
-						<input id='global' type="checkbox">
-						<span>全局</span>
-					</label>
-					<label for="ignore">
-						<input id='ignore' type="checkbox">
-						<span>忽略大小写</span>
-					</label>
-				</div>
-				<div class="result br3 b1"></div>
+				<textarea id="testText" class='br3 b1 m0 p0 test-text mb10' name="test-text" rows="5" placeholder="请输入测试文本"></textarea>
+				<input id="regInp" class='reg-text p0 b1 br3 mb10' type="text" placeholder="请输入正则">
+				<!--<div class='form-box mb10'>-->
+					<!--<input id="testBtn" class='btn' type="button" value='测试'>-->
+					<!--<label for="global">-->
+						<!--<input id='global' type="checkbox">-->
+						<!--<span>全局</span>-->
+					<!--</label>-->
+					<!--<label for="ignore">-->
+						<!--<input id='ignore' type="checkbox">-->
+						<!--<span>忽略大小写</span>-->
+					<!--</label>-->
+				<!--</div>-->
+				<!--<p>匹配结果</p>-->
+				<div id="resultBox" class="result br3 b1">匹配结果</div>
 			</div>
 			<div class="side br3 b1">
-				
+				<h2 class="c-reg">常用正则表达式</h2>
+				<ul id="regList" class="reg-list">
+					<li data-reg="/^(\+?86)?(0?1[0-9]{10})$/">手机号码</li>
+					<li data-reg="">邮箱</li>
+				</ul>
 			</div>
 		</div>
 	</div>
 </body>
-<script src='dist/index.js'></script>
+<script src='index.js'></script>
 </html>

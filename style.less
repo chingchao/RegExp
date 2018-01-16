@@ -1,3 +1,7 @@
+body {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: #585858;
+}
 .br3 {
 	border-radius: 3px;
 }
@@ -28,9 +32,16 @@ input, button, textarea {
 	font-size: 16px;
 }
 
+ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
 h1 { 
 	text-align: center;
 	font-size: 28px;
+	font-weight: 400;
 }
 .wrap {
 	width: 960px;
@@ -38,6 +49,7 @@ h1 {
 }
 .container {
 	display: flex;
+	padding-bottom: 30px;
 }
 .content {
 	flex-grow: 1;
@@ -45,12 +57,18 @@ h1 {
 	.result {
 		min-height: 100px;
 		background: #f9f9f9;
+		padding: 10px 8px;
+	}
+	.match-text {
+		color: #F9992A;
+	}
+	.br {
+		border: 1px solid #F9471A;
 	}
 }
 .side {
-	width: 300px;
-	background: #eee;
-	height: 100px;
+	width: 260px;
+	background: #f8f8f8;
 }
 
 .test-text {
@@ -64,8 +82,28 @@ h1 {
 	padding: 8px;
 	box-sizing: border-box;
 }
-.form-box {
+/*.form-box {
 	user-select: none;
 	margin-bottom: 30px;
+}*/
+
+.side {
+	padding: 0 6px;
+	.c-reg {
+		font-weight: 400;
+		font-size: 18px;
+		margin: 20px 6px 10px;
+	}
+	.reg-list {
+		color: #3285ff;
+		li {
+			cursor: pointer;
+			padding: 4px 6px;
+			margin: 2px 0 0;
+			&:hover {
+				background: #eee;
+			}
+		}
+	}
 }
 
