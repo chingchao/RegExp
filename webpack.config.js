@@ -7,19 +7,14 @@ let path = require('path');
 module.exports = {
 	devtool: 'eval-sorce-map',
 	entry: './index.js',
-	// entry: [
- //        'webpack-dev-server/client?http://localhost:8001',
- //        'webpack/hot/only-dev-server',
- //        path.join(__dirname, 'index.js')
- //    ],
 	output: {
-		path: __dirname + '/dist',
+        path: path.join(__dirname, '/dist/'),
 		filename: 'index.js'
 	},
 
 	devServer: {
 		port: '8001',
-		inline: true,
+		hot: true,
 		historyApiFallback: true
 	},
 
@@ -47,7 +42,7 @@ module.exports = {
         }]
 	},
 	plugins:[
-		// new webpack.HotModuleReplacementPlugin()
+		new webpack.HotModuleReplacementPlugin()
 		// new ExtractTextPlugin(),
      ]
 }
