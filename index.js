@@ -37,6 +37,7 @@ function testFn () {
         return false;
     }
 
+    //显示匹配
     let text = testText.value;
     console.log(reg);
     html = text.replace(reg, `<span class="match-text">$&</span>`);
