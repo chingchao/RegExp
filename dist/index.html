@@ -5,8 +5,11 @@
 	<title>正则工具</title>
 </head>
 <body>
+	<div class="header">
+		<img src="regexp1.png" alt="">
+		<h1>正则在线测试工具</h1>
+	</div>
 	<div class="wrap">
-		<h1>正则在线工具</h1>
 		<div class='container'>
 			<div class="content">
 				<textarea id="testText" class='br3 b1 m0 p0 test-text mb10' name="test-text" rows="5" placeholder="请输入测试文本"></textarea>
@@ -23,13 +26,13 @@
 					<!--</label>-->
 				<!--</div>-->
 				<!--<p>匹配结果</p>-->
-				<div id="resultBox" class="result br3 b1">匹配结果</div>
+				<div id="resultBox" class="result br3">匹配结果</div>
 			</div>
-			<div class="side br3 b1">
+			<div class="side br3">
 				<h2 class="c-reg">常用正则表达式</h2>
 				<ul id="regList" class="reg-list">
 					<li data-reg="/^(\+?86)?(0?1[0-9]{10})$/">手机号码</li>
-					<li data-reg="">邮箱</li>
+					<li data-reg="/\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/">邮箱</li>
 				</ul>
 			</div>
 		</div>
