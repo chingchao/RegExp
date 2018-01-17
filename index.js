@@ -4,9 +4,11 @@ let regInp = document.querySelector('#regInp');
 let testText = document.querySelector('#testText');
 
 //常用正则
-let regList = document.querySelector('#regList');
+let regList = document.querySelector('.js-reg-list');
 regList.onclick = function (e) {
-    regInp.value = e.target.getAttribute('data-reg');
+    let reg = e.target.getAttribute('data-reg');
+    if (!reg) return false;
+    regInp.value = reg;
     testFn();
 };
 

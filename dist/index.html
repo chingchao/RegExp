@@ -6,33 +6,40 @@
 </head>
 <body>
 	<div class="header">
-		<img src="regexp1.png" alt="">
+		<img src="regexp1.png" alt="" width="110">
 		<h1>正则在线测试工具</h1>
+		<a href="">正则语法</a>
 	</div>
 	<div class="wrap">
 		<div class='container'>
 			<div class="content">
 				<textarea id="testText" class='br3 b1 m0 p0 test-text mb10' name="test-text" rows="5" placeholder="请输入测试文本"></textarea>
 				<input id="regInp" class='reg-text p0 b1 br3 mb10' type="text" placeholder="请输入正则">
-				<!--<div class='form-box mb10'>-->
-					<!--<input id="testBtn" class='btn' type="button" value='测试'>-->
-					<!--<label for="global">-->
-						<!--<input id='global' type="checkbox">-->
-						<!--<span>全局</span>-->
-					<!--</label>-->
-					<!--<label for="ignore">-->
-						<!--<input id='ignore' type="checkbox">-->
-						<!--<span>忽略大小写</span>-->
-					<!--</label>-->
-				<!--</div>-->
-				<!--<p>匹配结果</p>-->
-				<div id="resultBox" class="result br3">匹配结果</div>
+				<div id="resultBox" class="result br3">[匹配结果]</div>
 			</div>
-			<div class="side br3">
+			<div class="side br3 js-reg-list">
 				<h2 class="c-reg">常用正则表达式</h2>
-				<ul id="regList" class="reg-list">
+				<div class="type">
+					<i></i>
+					<span>字符相关</span>
+					<i></i>
+				</div>
+				<ul class="reg-list">
+					<li data-reg="/[\u4e00-\u9fa5]/gm">中文字符</li>
+					<li data-reg="/[^\x00-\xff]/">双字节字符</li>
+					<li data-reg=""></li>
+				</ul>
+				<div class="type">
+					<i></i>
+					<span>表单验证</span>
+					<i></i>
+				</div>
+				<ul class="reg-list">
 					<li data-reg="/^(\+?86)?(0?1[0-9]{10})$/">手机号码</li>
 					<li data-reg="/\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/">邮箱</li>
+					<li data-reg="/^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/">身份证号</li>
+					<li data-reg="/(25[0-5]|2[0-4]\d|[0-1]\d{2}|[1-9]?\d)\.(25[0-5]|2[0-4]\d|[0-1]\d{2}|[1-9]?\d)\.(25[0-5]|2[0-4]\d|[0-1]\d{2}|[1-9]?\d)\.(25[0-5]|2[0-4]\d|[0-1]\d{2}|[1-9]?\d)/">IP</li>
+					<li data-reg="/^\d{4}(\-|\/|.)([1-9]|0[1-9]|1[012])\1([1-9]|0[1-9]|[12]\d|3[01])$/">日期格式</li>
 				</ul>
 			</div>
 		</div>
