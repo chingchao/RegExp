@@ -28,6 +28,9 @@ function testFn () {
         if (Object.prototype.toString.call(reg) !== '[object RegExp]') {
             throw 'not RegExp';
         }
+        if (/\/\/\/$/.test(regText)) {
+            throw 'not RegExp';
+        }
     } catch (e) {
         console.log('not RegExp');
         regInp.value !== '' ? regInp.classList.add('br') : '';
