@@ -1,4 +1,4 @@
-import './style.less';
+// import './style.less';
 
 let regInp = document.querySelector('#regInp');
 let testText = document.querySelector('#testText');
