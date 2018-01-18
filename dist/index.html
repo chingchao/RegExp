@@ -41,6 +41,20 @@
 					<li data-reg="/(25[0-5]|2[0-4]\d|[0-1]\d{2}|[1-9]?\d)\.(25[0-5]|2[0-4]\d|[0-1]\d{2}|[1-9]?\d)\.(25[0-5]|2[0-4]\d|[0-1]\d{2}|[1-9]?\d)\.(25[0-5]|2[0-4]\d|[0-1]\d{2}|[1-9]?\d)/">IP</li>
 					<li data-reg="/^\d{4}(\-|\/|.)([1-9]|0[1-9]|1[012])\1([1-9]|0[1-9]|[12]\d|3[01])$/">日期格式</li>
 				</ul>
+				<div class="type">
+					<i></i>
+					<span>浏览器验证</span>
+					<i></i>
+				</div>
+				<ul class="reg-list">
+					<li data-reg="/msie (\d+\.\d+)/i">IE浏览器</li>
+					<li data-reg="/webkit/i">webkit内核</li>
+					<li data-reg="/chrome\/(\d+\.\d+)/i">chrome浏览器</li>
+					<li data-reg="/firefox\/(\d+\.\d+)/i">firefox浏览器</li>
+					<li data-reg="/opera(\/| )(\d+(\.\d+)?)(.+?(version\/(\d+(\.\d+)?)))?/i">opera浏览器</li>
+					<li data-reg="/(\d+\.\d)?(?:\.\d)?\s+safari\/?(\d+\.\d+)?/i">safari浏览器</li>
+					<li data-reg="/android/i">android系统</li>
+				</ul>
 			</div>
 		</div>
 	</div>
